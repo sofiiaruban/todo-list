@@ -17,7 +17,9 @@ module.exports = {
   entry: "./index.js", // starting file
   output: {
     filename: `./${getFilename("js")}`,
-    path: path.resolve(__dirname, "app"), // where to put our build
+    path: path.resolve(__dirname, "app"), 
+    // where to put our build
+    publicPath: "/todo-list/"
   },
   devServer: {
     // set up webpack dev server to update js file on save
@@ -63,5 +65,5 @@ module.exports = {
         },
       },
     ],
-  },
-};
+  }
+}
