@@ -8,7 +8,7 @@
     "dev": "cross-env NODE_ENV=development webpack --mode development",
     "start": "cross-env NODE_ENV=development webpack serve --mode development",
     "prepare": "husky install",
-    "deploy": "gh-pages -d dist"
+    "deploy": "gh-pages -d app"
   },
   "author": "",
   "license": "ISC",
