@@ -1,0 +1,137 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  color: black;
+  min-height: 100vh;
+  font-size: 10px;
+}
+
+header {
+  font-size: 1.5rem;
+  margin-bottom: 1.5rem;
+}
+
+main {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.todo-header {
+  display: flex;
+  justify-content: center;
+  flex-direction: row;
+  align-items: center;
+}
+
+header,
+.todo-input-wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.todo-input-wrapper input,
+.todo-button {
+  padding: 0.5rem;
+  font-size: 2rem;
+  border: 2px solid black;
+  background: white;
+}
+.todo-input-wrapper input {
+  margin: 0 5px 0 0;
+}
+.todo-button {
+  background: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.todo-button:hover {
+  background: grey;
+  color: white;
+}
+
+.todo-button_disabled {
+  pointer-events: none;
+  color: #d3d3d3;
+}
+.todo-item_fall {
+  transform: translateY(8rem) rotateZ(20deg);
+  opacity: 0;
+}
+.todo-container {
+  margin: 10px 0 5px 0;
+}
+.todo-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+}
+
+.todo-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: white;
+  color: black;
+  margin-bottom: 0.5rem;
+  padding-left: 0.5rem;
+  transition: all 0.5s ease-in-out;
+  width: 300px;
+  border: 2px solid black;
+}
+
+.todo-text {
+  font-size: 1.5rem;
+  flex: 1;
+}
+
+.todo-remove-button {
+  background: red;
+  color: white;
+  border: none;
+  padding: 1rem;
+  cursor: pointer;
+  font-size: 1rem;
+}
+.pagination-container {
+  display: none;
+  /*display: flex;*/
+  justify-content: center;
+  align-items: center;
+  flex-direction: row;
+}
+.pageButton {
+  border: 1px solid black;
+  padding: 0.5rem;
+}
+.clickPageNumber {
+  background-color: lightgrey;
+  padding: 0.5rem;
+  margin-left: 0.5rem;
+  margin-right: 0.5rem;
+}
+.pagination-container {
+  text-align: center;
+  width: 100%;
+}
+.pagination-container span {
+  display: inline-block;
+}
+.pagination-container .pageButton {
+  background-color: grey;
+  color: white;
+}
+.pagination-container span:hover {
+  cursor: pointer;
+}
+.opacity {
+  opacity: 0.5;
+}
+
