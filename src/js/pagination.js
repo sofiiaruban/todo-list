@@ -3,28 +3,33 @@ import {
   saveCurPageToSStorage,
   getCurPageFromSStorage,
 } from "./sessionStorage";
-import { prevButton, nextButton, todoList, renderTodosFromSStorage } from "./main.js";
+import {
+  prevButton,
+  nextButton,
+  todoList,
+  renderTodosFromSStorage,
+} from "./main.js";
 import { getTodoItem } from "./addTodoItem";
 
 const todos = getTodosFromSStorage();
-const clickPageNumber = document.querySelectorAll(".clickPageNumber");
+const clickPageNumber = document.querySelectorAll(".click-page-number");
 
 let currentPage = 1;
 let recordsSize = 5;
 
 export function numPages() {
   const todos = getTodosFromSStorage();
-  return Math.ceil(todos.length/recordsSize);
+  return Math.ceil(todos.length / recordsSize);
 }
 
 export function selectedPage() {
-  let page_number = document.getElementsByClassName("clickPageNumber");
+  let pageNumber = document.getElementsByClassName("click-page-number");
   currentPage = getCurPageFromSStorage();
-  for (let i = 0; i < page_number.length; i++) {
+  for (let i = 0; i < pageNumber.length; i++) {
     if (i === currentPage - 1) {
-      page_number[i].style.opacity = "1.0";
+      pageNumber[i].style.opacity = "1.0";
     } else {
-      page_number[i].style.opacity = "0.5";
+      pageNumber[i].style.opacity = "0.5";
     }
   }
 }
@@ -81,7 +86,7 @@ export function clickPage() {
   document.addEventListener("click", function (e) {
     if (
       e.target.nodeName == "SPAN" &&
-      e.target.classList.contains("clickPageNumber")
+      e.target.classList.contains("click-page-number")
     ) {
       currentPage = e.target.textContent;
       saveCurPageToSStorage(currentPage);
@@ -91,7 +96,7 @@ export function clickPage() {
   });
 }
 export function pageNumbers() {
-  let pageNumber = document.getElementById("page_number");
+  let pageNumber = document.getElementById("page-number");
   pageNumber.innerHTML = "";
 
   for (let i = 1; i < numPages() + 1; i++) {

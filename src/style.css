@@ -107,11 +107,11 @@ header,
   align-items: center;
   flex-direction: row;
 }
-.pageButton {
+.page-button {
   border: 1px solid black;
   padding: 0.5rem;
 }
-.clickPageNumber {
+.click-page-number {
   background-color: lightgrey;
   padding: 0.5rem;
   margin-left: 0.5rem;
