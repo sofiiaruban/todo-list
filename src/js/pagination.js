@@ -25,6 +25,7 @@ export function numPages() {
 export function selectedPage() {
   let pageNumber = document.getElementsByClassName("click-page-number");
   currentPage = getCurPageFromSStorage();
+
   for (let i = 0; i < pageNumber.length; i++) {
     if (i === currentPage - 1) {
       pageNumber[i].style.opacity = "1.0";
@@ -100,6 +101,6 @@ export function pageNumbers() {
   pageNumber.innerHTML = "";
 
   for (let i = 1; i < numPages() + 1; i++) {
-    pageNumber.innerHTML += "<span class='clickPageNumber'>" + i + "</span>";
+    pageNumber.innerHTML += "<span class='click-page-number'>" + i + "</span>";
   }
 }

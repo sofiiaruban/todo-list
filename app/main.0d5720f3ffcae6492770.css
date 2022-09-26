@@ -124,7 +124,7 @@ header,
 .pagination-container span {
   display: inline-block;
 }
-.pagination-container .pageButton {
+.pagination-container .page-button {
   background-color: grey;
   color: white;
 }
