@@ -6,7 +6,7 @@ import {
   saveTodoToSStorage,
   getTodosFromSStorage,
   getCurPageFromSStorage,
-  saveCurPageToSStorage
+  saveCurPageToSStorage,
 } from "./sessionStorage";
 import {
   clearTodoInput,
@@ -23,8 +23,7 @@ import {
   clickPage,
   pageNumbers,
   numPages,
-  renderChangedPage, 
-  
+  renderChangedPage,
 } from "./pagination";
 
 const todoInputWrapper = document.querySelector(".todo-input-wrapper");
@@ -33,8 +32,8 @@ const todoList = document.querySelector(".todo-list");
 export { todoList };
 const paginationBtns = document.querySelector(".pagination-container");
 
-const prevButton = document.getElementById("button_prev");
-const nextButton = document.getElementById("button_next");
+const prevButton = document.getElementById("button-prev");
+const nextButton = document.getElementById("button-next");
 export { prevButton, nextButton };
 
 document.addEventListener("DOMContentLoaded", onDOMLoaded);
@@ -58,7 +57,6 @@ function onDOMLoaded(event) {
   showPagination();
 }
 
-
 export function renderTodosFromSStorage() {
   let currentPage = getCurPageFromSStorage();
   let todos = changePage(currentPage);
@@ -68,11 +66,11 @@ export function renderTodosFromSStorage() {
     todoList.appendChild(todoItem);
   });
 }
-export function showPagination(){
+export function showPagination() {
   let todos = getTodosFromSStorage();
-  if (todos.length > 4){
+  if (todos.length > 4) {
     paginationBtns.style.display = "flex";
-  } 
+  }
 }
 
 function addTodo(event) {
