@@ -47,7 +47,6 @@ function onDOMLoaded(event) {
   event.preventDefault();
   renderTodosFromSStorage();
   validateTodoInput(todoInputWrapper);
-  //saveCurPageToSStorage(1);
   getCurPageFromSStorage();
   changePage();
   pageNumbers();

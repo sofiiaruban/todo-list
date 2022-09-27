@@ -52,13 +52,6 @@ export function changePage(page) {
 }
 
 export function renderChangedPage() {
-  //currentPage = getCurPageFromSStorage();
-  //todoList.innerHTML = "";
-  //let todos = changePage(currentPage);
-  //todos.forEach((todoValue) => {
-  //  const todoItem = getTodoItem(todoValue.todotext);
-  //  todoList.appendChild(todoItem);
-  //});
   renderTodosFromSStorage();
   checkButtonOpacity();
   selectedPage();
